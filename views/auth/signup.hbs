@@ -1,0 +1,20 @@
+<h2>Signup</h2>
+<form action="/signup" method="POST">
+  <label>
+    Username
+      <input type="text" name="username" placeholder="Your Username">
+  </label>
+  <label>
+    Email
+      <input type="text" name="email" placeholder="Your email">
+  </label>
+  <label>
+    Password
+      <input type="password" name="password" placeholder="Your password">
+  </label>
+  <button type="submit">Create account</button>
+</form>
+
+{{#if errorMessage}}
+  <div class="error">{{errorMessage}}</div> <!--server side validation -->
+{{/if}}

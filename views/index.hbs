@@ -1,2 +1,17 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+</div class="welcome-page">
+    <h1>{{title}}</h1>
+    <p>Welcome to {{title}}</p>
+    <a href="/signup">Sign Up</a>
+    <a href="/login">Log in</a>
+    
+
+    {{#if user}}
+    <form action="/logout" method="POST">
+        <button type="submit">Log out</button>
+    </form>
+  <div class="welcome">Welcome {{user.username}}</div>
+  <a href="/private">private</a>
+  <a href="/main">main</a>
+    {{/if}}
+</div>
+
